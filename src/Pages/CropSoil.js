@@ -38,7 +38,7 @@ const CropSoil = () => {
     return (
         <>
             <Header />
-            <h1 style={{ margin: "10px 25px 20px 25px" }}>Crops Page</h1>
+            <h1 style={{ margin: "10px 25px 20px 25px" }}>Crops Soil   Mapping</h1>
             <SearchBar onSearch={handleSearch} />
 
             <div className="crop-list">

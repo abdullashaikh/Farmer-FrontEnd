@@ -10,7 +10,9 @@ const Card = props => {
             <img
                 // src={`Images/${props.image}`}
                 // src={`Images/${props.image}`}
-                src={`https://backend-377w.vercel.app/public/uploads/${props.image}`}
+               
+                src={`https://ik.imagekit.io/jdikihwtu/${props.image}`}
+                // src={`https://backend-377w.vercel.app/public/uploads/${props.image}`}
                 alt="Image Not Found"
                 className="card-img"
             />

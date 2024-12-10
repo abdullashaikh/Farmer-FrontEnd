@@ -5,7 +5,8 @@ const CardMapping = ({ soilTypeName, soilImage, crops }) => {
     return (
         <div className="card-container">
             <img
-                src={`https://backend-377w.vercel.app/public/uploads/${soilImage}`}
+                src={`https://ik.imagekit.io/jdikihwtu/${soilImage}`}
+                // src={`https://backend-377w.vercel.app/public/uploads/${soilImage}`}
                 alt="Soil Image"
                 className="card-image"
             />
