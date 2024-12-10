@@ -1,0 +1,12 @@
+.crop-list {
+    margin:25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the gap between cards as needed */
+  }
+  
+  .crop-list > * {
+    flex: 1 1 calc(25% - 16px); /* 4 columns, adjust the gap as needed */
+    box-sizing: border-box;
+  }
+  

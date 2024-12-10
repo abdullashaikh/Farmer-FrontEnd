@@ -5,19 +5,20 @@ import Footer from "../Components/Footer/Footer";
 import SearchBar from "../Components/SearchBar/SearchBar";
 import './Crop.css';
 import Card from "../Components/Card/Card";
+import CardMapping from "../Components/CardMapping/Card";
 
-const Crops = () => {
-    const [crops, setCrops] = useState([]);
+const CropSoil = () => {
+    const [cropSoil, setCropSoil] = useState([]);
     const [filteredCrops, setFilteredCrops] = useState([]);
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
-        axios.get(`https://backend-377w.vercel.app/crop-type`)
+        axios.get(`https://backend-377w.vercel.app/grouped-by-soil`)
             .then(result => {
                 if (result.status === 200) {
-                    setCrops(result.data);
-                    setFilteredCrops(result.data); // Initialize filteredCrops with all crops
+                    setCropSoil(result.data);
+                    setFilteredCrops(result.data); // Initialize filteredCrops with all cropSoil
                 }
             })
             .catch(err => {
@@ -27,7 +28,7 @@ const Crops = () => {
 
     const handleSearch = (query) => {
         setSearchTerm(query.toLowerCase());
-        const filtered = crops.filter(crop =>
+        const filtered = cropSoil.filter(crop =>
             crop.cropName.toLowerCase().includes(query.toLowerCase()) ||
             crop.cropSummary.toLowerCase().includes(query.toLowerCase())
         );
@@ -42,10 +43,17 @@ const Crops = () => {
 
             <div className="crop-list">
                 {filteredCrops.length > 0 ? (
-                    filteredCrops.map((crop) => (
-                        <Card key={crop.id} name={crop.cropName} summary={crop.cropSummary} image={crop.cropImage} />))
+                    filteredCrops.map((crop, index) => (
+                        <CardMapping
+                            key={index}
+                            soilTypeId={crop.soilTypeId}
+                            soilTypeName={crop.soilTypeName}
+                            soilImage={crop.soilImage}
+                            crops={crop.crops}
+                        />
+                    ))
                 ) : (
-                    <p>No crops found.</p>
+                    <p>No Crop Soil Data found.</p>
                 )}
             </div>
             <Footer />
@@ -53,4 +61,4 @@ const Crops = () => {
     );
 };
 
-export default Crops;
+export default CropSoil;

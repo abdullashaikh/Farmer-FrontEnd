@@ -32,8 +32,8 @@ const Gallery = () => {
                     <img src={images[currentIndex]} alt="gallery" />
                 </div>
                 <div className="gallery__container__buttons">
-                    <button onClick={prevImage}>Prev</button>
-                    <button onClick={nextImage}>Next</button>
+                    {/* <button onClick={prevImage}>Prev</button>
+                    <button onClick={nextImage}>Next</button> */}
                 </div>
             </div>
         </div>

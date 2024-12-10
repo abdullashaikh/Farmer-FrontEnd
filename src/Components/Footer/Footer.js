@@ -17,38 +17,33 @@ const Footer = () => {
                         alt="Farm Connect-1 Logo"
                         className="footer__logo"
                     />
-                    <p className="footer__container__left__text">
-                        This is a demo website for Farm Connect 1. It is a marketplace for farmers to sell their crops.
-                    </p>
+
                 </div>
-                <div className="footer__container__mid">
+                {/* <div className="footer__container__mid">
                     <div className="footer__container__mid__links">
                         <h2>Links</h2>
-                        <ul>
+                     <ul>
                             <li>Home</li>
                             <li>Crops</li>
-                            <li>Marketplace</li>
+                            <li>Soil</li>
                             <li>News</li>
-                            <li>Policy</li>
-                        </ul>
+                        </ul> 
                     </div>
-                </div>
+                </div> */}
                 <div className="footer__container__right">
                     <div className="footer__container__right__authors">
                         <h2>Authors</h2>
                         <ul>
                             <li>
-                                <a href="https://nitishpandey.com.np" target="_blank">Nitish Pandey</a>
+                                <a href="" target="_blank">Muhammad Shaikh</a>
                             </li>
-                            <li>
-                                <a href="https://sulabh.info.np" target="_blank">Sulabh Nepal</a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="footer__bottom">
-                <p>© 2023 Farmer Friends. All Rights Reserved.</p>
+                <p>© Agriculture Portal. All Rights Reserved.</p>
             </div>
         </div>
     );

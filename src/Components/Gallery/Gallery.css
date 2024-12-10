@@ -2,9 +2,9 @@
     left: 0;
     right: 0;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #f8f9fa;
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
     position: relative;
 }
 

@@ -12,7 +12,7 @@ const Header = ({ loggedIn }) => {
     return (
         <header className='header'>
             <div className='header__title'>
-                <h1>Farm Connect</h1>
+                <h1>Agriculture Portal</h1>
                 <img
                     src='https://s.tmimgcdn.com/scr/1200x750/180200/tractor-farm-logo-template_180278-original.png'
                     alt='Farm Connect Logo'
@@ -22,7 +22,7 @@ const Header = ({ loggedIn }) => {
             <nav className='header__nav'>
                 <ul className='header__nav-list'>
                     <li className='header__nav-item'>
-                        <Link to='/' className='header__nav-link'>
+                        <Link to='/home' className='header__nav-link'>
                             Home
                         </Link>
                     </li>
@@ -32,22 +32,30 @@ const Header = ({ loggedIn }) => {
                         </Link>
                     </li>
                     <li className='header__nav-item'>
-                        <Link to='/marketplace' className='header__nav-link'>
-                            Marketplace
+                        <Link to='/soil' className='header__nav-link'>
+                            Soil
                         </Link>
                     </li>
                     <li className='header__nav-item'>
-                        <Link to='/news' className='header__nav-link'>
+                        <Link to='/crop-soil' className='header__nav-link'>
+                            Crop & Soil Mapping
+                        </Link>
+                    </li>
+                    <li className='header__nav-item'>
+                        <Link to='/weather' className='header__nav-link'>
+                            Weather
+                        </Link>
+                    </li>
+                    {/* <li className='header__nav-item'>
+                        <Link to='/policies' className='header__nav-link'>
                             News
                         </Link>
-                    </li>
+                    </li> */}
                     <li className='header__nav-item'>
-                        <Link to='/policies' className='header__nav-link'>
-                            Policies
+                        <Link to='/dashboard' className='header__nav-link'>
+                            Dashboard
                         </Link>
-                    </li>
-                    <li className='header__nav-item'>
-                        {loggedIn ? (
+                        {/* {loggedIn ? (
                             <Link to='/dashboard' className='header__nav-link'>
                                 Dashboard
                             </Link>
@@ -56,11 +64,11 @@ const Header = ({ loggedIn }) => {
                                 <Link to='/login' className='header__nav-link'>
                                     Login
                                 </Link>
-                                <Link to='/signup' className='header__nav-link'>
+                                <Link to='/register' className='header__nav-link'>
                                     Signup
                                 </Link>
                             </>
-                        )}
+                        )} */}
                     </li>
                 </ul>
             </nav>
